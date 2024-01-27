@@ -7,6 +7,7 @@ from authlib.integrations.flask_client import OAuth
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, redirect, render_template, session, url_for
 from app.models.user import User
+from app.models.character import Character
 
 # Locating and using env vars
 ENV_FILE = find_dotenv()
