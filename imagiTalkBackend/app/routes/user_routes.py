@@ -1,13 +1,14 @@
 from app import app, db
 from flask import request, jsonify, make_response
-import cohere
+# import cohere
 import json
-from os
+import os
 from urllib.parse import quote_plus, urlencode
 from authlib.integrations.flask_client import OAuth
 from dotenv import find_dotenv, load_dotenv
 from flask import Flask, redirect, render_template, session, url_for
 from app.models.user import User
+from app.models.character import Character
 
 # Locating and using env vars
 ENV_FILE = find_dotenv()
@@ -15,16 +16,16 @@ if ENV_FILE:
     load_dotenv(ENV_FILE)
 
 # Initializing Auth0
-app.secret_key = env.get("APP_SECRET_KEY")
+app.secret_key = os.environ.get("APP_SECRET_KEY")
 oauth = OAuth(app)
 oauth.register(
     "auth0",
-    client_id=env.get("AUTH0_CLIENT_ID"),
-    client_secret=env.get("AUTH0_CLIENT_SECRET"),
+    client_id=os.environ.get("AUTH0_CLIENT_ID"),
+    client_secret=os.environ.get("AUTH0_CLIENT_SECRET"),
     client_kwargs={
         "scope": "openid profile email",
     },
-    server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration'
+    server_metadata_url=f'https://{os.environ.get("AUTH0_DOMAIN")}/.well-known/openid-configuration'
 )
 
 # ========== ROUTE TO CHECK API RUNS ==========

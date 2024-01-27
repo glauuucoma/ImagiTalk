@@ -8,6 +8,7 @@ from flask import request, jsonify
 load_dotenv()
 
 cohere_key = os.getenv("COHERE_KEY")
+print("Key: ", cohere_key)
 co = cohere.Client(cohere_key)
 
 # ========== API ROUTE TO GET COHERE TEXT GENERATION (BETA) ==========
@@ -17,6 +18,9 @@ def generate_text():
 
     # Generate text using cohere API
     response = co.generate(prompt=user_prompt["data"])
-    
-    return jsonify({"result": response_str})
+
+    generated_text = response.generations[0].text
+
+    # Return the generated text in a JSON-serializable format
+    return jsonify({"result": generated_text})
 
