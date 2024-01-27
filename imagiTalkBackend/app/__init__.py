@@ -8,4 +8,4 @@ CORS(app, supports_credentials=True)  # This will enable CORS for all routes and
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 
-from app.routes import user_routes
+from app.routes import user_routes, cohere_routes
