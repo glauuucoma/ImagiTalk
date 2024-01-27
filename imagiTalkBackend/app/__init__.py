@@ -15,4 +15,4 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 
 # from app.routes import user_routes, cohere_routes
-from app.routes import user_routes
+from app.routes import user_routes, character_routes, cohere_routes
