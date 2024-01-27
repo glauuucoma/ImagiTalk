@@ -184,7 +184,7 @@ button:not(.start-chatting-btn) {
 .start-chatting-btn {
   background-color: #F77B63 !important;
   font-size: large;
-  font-weight: bolder;
+  font-weight: bolder ;
 }
 
 /** Navbar Css **/
