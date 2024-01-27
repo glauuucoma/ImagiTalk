@@ -3,6 +3,7 @@ load_dotenv()
 
 from app import app, db
 
+# Create all database tables before running the app
 with app.app_context():
     db.create_all()
 
