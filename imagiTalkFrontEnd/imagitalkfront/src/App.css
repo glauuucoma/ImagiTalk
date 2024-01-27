@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "kohinoor", sans-serif;
-  border: 1px red  solid;
 }
 
 html {
@@ -172,9 +171,20 @@ button:not(.start-chatting-btn) {
 .home-body-text-block {
   padding-left: 10vw;
   padding-bottom: 10vw;
+  font-weight: lighter;
+}
+.home-body-text-block h1 {
+  font-size: 4vw;
+}
+.home-body-text-block p {
+  font-size: 1.2vw;
+  line-height: 1.5; /* Adjust the value to increase or decrease line spacing */
+
 }
 .start-chatting-btn {
   background-color: #F77B63 !important;
+  font-size: large;
+  font-weight: bolder;
 }
 
 /** Navbar Css **/
@@ -184,10 +194,3 @@ button:not(.start-chatting-btn) {
 .nav-link:hover {
   text-decoration: underline;
 }
-
-/* .btn-div {
-  display: flex;
-  /* align-items: flex-start;  */
-  /* justify-content: flex-start;  
-  margin-top: 20px; 
-} */
