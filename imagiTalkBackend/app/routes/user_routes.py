@@ -1,7 +1,8 @@
 from app import app, db
 from flask import request, jsonify, make_response
+import cohere
 import json
-from os import environ as env
+from os
 from urllib.parse import quote_plus, urlencode
 from authlib.integrations.flask_client import OAuth
 from dotenv import find_dotenv, load_dotenv
