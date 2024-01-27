@@ -14,8 +14,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #e0e0dc !important;
-  color: #000 !important;
+  background-color: #4654C1 !important;
+  color: white !important;
   font-family: "Centra", sans-serif !important;
 }
 
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  color: white;
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -36,7 +36,7 @@ a,
 li,
 button,
 ul {
-  color: #000;
+  color: white;
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -62,6 +62,27 @@ textarea:focus,
 select:focus {
   outline: none;
 }
-/** Home **/
 
-/** Chat **/
+/** Home Css **/
+
+
+
+/** Navbar Css **/
+.navbar {
+  background-color: #4654C1;
+  color: white;
+}
+.logo {
+  max-height: 100%;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.homebody .text-block{
+  padding-left: 20vw;
+}
+.home-button {
+  background-color: #F77B63 !important;
+}
+
+
