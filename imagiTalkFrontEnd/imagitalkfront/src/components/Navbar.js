@@ -4,7 +4,7 @@ import LogoImage from '../img/logo.png';  // Import the logo image
 
 const Navbar = () => {
   return (
-    <BootstrapNavbar className='navbar justify-content-between'>
+    <BootstrapNavbar className='navbar justify-content-between px-3'>
       <BootstrapNavbar.Brand className=''>
         <img
           alt="Logo"

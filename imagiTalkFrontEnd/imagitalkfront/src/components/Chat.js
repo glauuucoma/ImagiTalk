@@ -1,61 +1,40 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import character from "../img/chat-char.png";
+import NorthIcon from "@mui/icons-material/North";
 
 const Chat = () => {
   return (
-    <Container fluid>
+    <Container fluid className="chat">
       <Row>
-        {/* First column */}
-        <Col md={3} style={{ background: "#F77B63", padding: "20px" }}>
-          {/* Image and description */}
-          <div>
-            <img
-              src="https://placekitten.com/150/150" // Replace with your image URL
-              alt="User Avatar"
-              style={{ width: "100%", borderRadius: "50%" }}
-            />
+        <Col lg={3} className="character-info">
+          <div className="character-icon-wrapper">
+            <div className="character-icon">
+              <img src={character} alt="character" />
+            </div>
+            <p>Character name</p>
           </div>
-          <div style={{ marginTop: "10px" }}>
-            <p>Description goes here</p>
+          <div className="chat-history">
+            <button className="chat-history-btn">Chat #{1}</button>
+            <button className="chat-history-btn">Chat #{2}</button>
+            <button className="chat-history-btn">Chat #{3}</button>
           </div>
-
-          {/* Buttons */}
-          <div style={{ marginTop: "20px" }}>
-            <Button variant="outline-light" block>
-              Button 1
-            </Button>
-            <Button variant="outline-light" block>
-              Button 2
-            </Button>
-            <Button variant="outline-light" block>
-              Button 3
-            </Button>
-          </div>
-
-          {/* Full-width button */}
-          <div style={{ marginTop: "20px" }}>
-            <Button variant="danger" block>
-              Big Button
-            </Button>
-          </div>
+          <button className="create-chat-btn">New chat</button>
         </Col>
-
-        {/* Second column */}
-        <Col md={9} style={{ padding: "20px" }}>
-          {/* Input form */}
-          <Form>
-            <Form.Group controlId="formMessage">
-              <Form.Control type="text" placeholder="Type your message..." />
-            </Form.Group>
-            <Button variant="primary" type="submit" block>
-              Submit
-            </Button>
-          </Form>
-
-          {/* Text in the center */}
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <p>Text in the center</p>
-          </div>
+        <Col lg={9} className="chat-input-wrapper">
+          <p>
+            Ask your favourite character
+            <br />
+            any question....
+          </p>
+          {/* <input type="text" placeholder="How are you doing?" />
+           */}
+          <form>
+            <textarea />
+            <button>
+              <img src={NorthIcon} alt="icon" />
+            </button>
+          </form>
         </Col>
       </Row>
     </Container>
